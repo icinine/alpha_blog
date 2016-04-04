@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Alpha Blog | Not A Beta</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <header_inner>
+    <%= link_to image_tag('logo.jpg'), root_path, id: "logo" %>
+  </header_inner>
 
+  <nav>
+    
+      <%= link_to "Sign Out" %>
+     
+      <%= link_to "Sign In"  %>
+      
+    
+  </nav>
+</header>
 <%= yield %>
 
 </body>
