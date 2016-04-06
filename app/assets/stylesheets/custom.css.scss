@@ -18,6 +18,13 @@ body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
 
+	h1 {
+			@include bold_font;
+			color: $dark_gray;
+			font-size: 3.5rem;
+			margin-top: 60px;
+		}
+		
 .wrapper {
 	width: 80%;
 	margin: 0 auto;
