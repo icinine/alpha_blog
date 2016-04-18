@@ -6,7 +6,9 @@
     <% end %>
     </ul>
 <% end %>
-
+<div class="row">
+<div class = "col-md-6">
+<div class="well">
 <%= form_for @article do |f| %>
 
 <p>
@@ -25,5 +27,12 @@
 </p>
     
 <% end %>
-
-<%= link_to "Back to Listing", articles_path %>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<br/>
+<div class = "row">
+<%= link_to "Back to Listing", articles_path, class: "mybtn" %>
+</div>
+<br/>

@@ -3,7 +3,7 @@
 
 $dark_gray: #2B2E2E;
 $light_gray: #C0C1C1;
-$green: #33CD99;
+$green: #eca012;
 
 @mixin bold_font {
 	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
@@ -33,6 +33,8 @@ body {
 	margin: 0 auto;
 }
 
+
+
 .wrapper_with_padding {
 	width: 80%;
 	margin: 0 auto;
@@ -52,11 +54,15 @@ button, .button {
 	border: none;
 	outline: none;
 	background: $green;
-	padding: 1rem 3.5rem;
-	border-radius: 2rem;
-	a {
+	padding: 2rem 3.5rem;
+	border-radius: 3rem;
+	p {
 		color: white;
 		text-decoration: none;
+		font-size: 3.5rem;
+		&:hover {
+		color: $dark_gray;
+	}
 	}
 }
 
@@ -73,8 +79,52 @@ a {
 	}
 }
 
+#logo{
+	float:left;
+	margin-left: 10px;
+
+}
+
+header_inner image_tag{
+	width:50px;
+}
+
+#text_logo{
+	float: left;
+	margin-left: 10px;
+	font-weight: 700;
+font-size: .8em;
+letter-spacing: 4px;
+text-transform: uppercase;
+border: 2px solid;
+padding: 1rem;
+text-decoration: none;
+color: $dark_gray;
+
+}
+
+.mybtn {
+	margin-left: 10px;
+	font-weight: 700;
+font-size: .8em;
+letter-spacing: 4px;
+text-transform: uppercase;
+border: 2px solid;
+padding: 1rem;
+text-decoration: none;
+color: $dark_gray;
+	
+}
+
+nav{
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+	
+}
+
 header {
-	background: $dark_gray;
+	background: #f1efe3;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -83,6 +133,7 @@ header {
 	.header_inner {
 		width: 90%;
 		margin: 0 auto;
+		
 		#logo {
 			display: inline-block;
 			width: 10rem;
@@ -90,6 +141,8 @@ header {
 		}
 		nav {
 			float: right;
+			margin-right: 10px;
+		
 			a {
 				text-decoration: none;
 				color: white;
@@ -104,17 +157,57 @@ header {
 	}
 }
 
-footer {
-	background: $dark_gray;
+.wrapper_foot {
 	width: 100%;
-	padding: 2rem 0;
+	padding-top: 15px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	background: $dark_gray;
+}
+
+.foot_hr {
+	border-bottom: 4px solid #f1f1f1;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+footer {
+	/*background: $dark_gray;*/
+	width: 80%;
+	/*height: 8rem;*/
+/*	padding: 2rem 0; */
 	color: white;
 	text-align: center;
-	@include bold_font;
+	background: $dark_gray;
+	margin: 0 auto;
+	/*@include bold_font;*/
 	p {
 		margin: 0;
-		font-size: .85rem;
+		font-size: 1.5rem;
 	}
+}
+
+.footer_inner {
+	width: 90%;
+	margin: 0 auto;
+	clear:both;
+}
+
+.inner_1{
+	width: 30%;
+	margin: 0 auto;
+	float: left;
+	
+}
+
+.inner_2{
+	width: 30%;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	float: left;
+	
+	
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
@@ -135,7 +228,7 @@ textarea {
 /********* About Page ********/
 
 #callabouts {
-	background-image: url(image_path("coffee-shop-laptop-50.jpg"));
+	background-image: url(image_path("hipster-office-e1417796369862.jpg"));
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -157,7 +250,13 @@ textarea {
 			margin-bottom: 0;
 		}
 		p {
-			color: rgba(250, 250, 250, 0.4);
+			color: white;
+			font-size: 13px;
 		}
 	}
+}
+
+.glyphicon {
+	font-size: 40px;
+	color: white;
 }

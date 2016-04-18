@@ -1,0 +1,29 @@
+<header>
+  <header_inner>
+    <%= link_to image_tag('emblem_logo.jpg'), root_path, id: "logo" %><div id ="text_logo">Alpha Blog</div>
+  </header_inner>
+
+  <nav>
+    <%= link_to "Home", root_path, class: "mybtn" %>
+    <%= link_to "About", about_path, class: "mybtn" %>
+    <%= link_to "Posts", articles_path, class: "mybtn" %>
+
+      <ul class="nav navbar-nav">
+        <li class="dropdown mybtn">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "New Article", new_article_path %></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    <%= link_to "Sign Out", "", class: "mybtn" %>
+    <%= link_to "Sign In", "", class: "mybtn" %>
+  </nav>
+</header>
+<div class = "clearfix"></div>

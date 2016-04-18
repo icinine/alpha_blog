@@ -4,28 +4,36 @@
   <title>Alpha Blog | Not A Beta</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <%= csrf_meta_tags %>
 </head>
-<body>
-<header>
-  <header_inner>
-    <%= link_to image_tag('logo.jpg'), root_path, id: "logo" %>
-  </header_inner>
-
-  <nav>
+  <body>
     
-      <%= link_to "Sign Out" %>
-     
-      <%= link_to "Sign In"  %>
-      
+    <%= render 'layouts/nav.html.erb' %>
     
-  </nav>
-</header>
-
-
-<%= render 'layouts/messages' %>
-
-<%= yield %>
-
-</body>
+    <%= render 'layouts/messages' %>
+<div class="wrapper">
+    <%= yield %>
+</div>
+  
+<div class = "row">
+  <div class = "wrapper_foot">
+   <footer>
+     <br>
+      <div class = "col-md-4 foot_hr"><span class="glyphicon glyphicon-link"></span><p>Meatball drumstick pork loin, ham ball tip landjaeger andouille pig. Rump short ribs shank pig corned beef picanha strip steak turkey ground round bresaola shankle pork loin</p></div>
+      <div class = "col-md-4 foot_hr"><span class="glyphicon glyphicon-link"></span><p>Meatball drumstick pork loin, ham ball tip landjaeger andouille pig. Rump short ribs shank pig corned beef picanha strip steak turkey ground round bresaola shankle pork loin</p></div>
+      <div class = "col-md-4 foot_hr"><span class="glyphicon glyphicon-link"></span><p>Meatball drumstick pork loin, ham ball tip landjaeger andouille pig. Rump short ribs shank pig corned beef picanha strip steak turkey ground round bresaola shankle pork loin</p></div>  
+ 
+    <div class = "row">
+      <div class="col-md-1"><i class="fa fa-twitter"></i></div>
+      <div class="col-md-1"><i class="fa fa-facebook"></i></div>
+      <div class="col-md-1"><i class="fa fa-github"></i></div>
+    </div>
+    </footer>
+  </div>
+</div>
+  
+  
+  
+  </body>
 </html>

@@ -1,5 +1,5 @@
 #banner {
-	background-image: url(image_path("hipster_header.jpg"));
+	background-image: url(image_path("hipster-desk-photo.jpg"));
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -13,11 +13,11 @@
 		h1 {
 			@include bold_font;
 			color: white;
-			font-size: 3.5rem;
+			font-size: 6.5rem;
 			margin: 0;
 		}
 		p {
-			font-size: 1.5rem;
+			font-size: 3.5rem;
 			margin: 0 0 2.5rem 0;
 			color: rgba(250, 250, 250, 0.5);
 		}
@@ -26,7 +26,7 @@
 
 #testimonial {
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 3.5rem;
 	color: #afb0b0;
 	padding: 3.5rem 0;
 	.quote {
@@ -36,12 +36,12 @@
 		@include bold_font;
 		color: $dark_gray;
 		margin: 0;
-		font-size: .85rem;
+		font-size: 1rem;
 	}
 }
 
 #callouts {
-	background-image: url(image_path("dsc_0009-copy.jpg"));
+	background-image: url(image_path("hipster+desk.jpg"));
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -63,7 +63,8 @@
 			margin-bottom: 0;
 		}
 		p {
-			color: rgba(250, 250, 250, 0.4);
+			color: white;
+			font-size: 1.5rem;
 		}
 	}
 }
