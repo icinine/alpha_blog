@@ -17,24 +17,9 @@
     <%= render 'layouts/messages' %>
 </div>
   
-<div class = "row">
-  <div class = "wrapper_foot">
-   <footer>
-     <br>
-      <div class = "col-md-4 foot_hr"><span class="glyphicon glyphicon-link"></span><p>Meatball drumstick pork loin, ham ball tip landjaeger andouille pig. Rump short ribs shank pig corned beef picanha strip steak turkey ground round bresaola shankle pork loin</p></div>
-      <div class = "col-md-4 foot_hr"><span class="glyphicon glyphicon-link"></span><p>Meatball drumstick pork loin, ham ball tip landjaeger andouille pig. Rump short ribs shank pig corned beef picanha strip steak turkey ground round bresaola shankle pork loin</p></div>
-      <div class = "col-md-4 foot_hr"><span class="glyphicon glyphicon-link"></span><p>Meatball drumstick pork loin, ham ball tip landjaeger andouille pig. Rump short ribs shank pig corned beef picanha strip steak turkey ground round bresaola shankle pork loin</p></div>  
- 
-    <div class = "row">
-      <div class="col-md-1"><i class="fa fa-twitter"></i></div>
-      <div class="col-md-1"><i class="fa fa-facebook"></i></div>
-      <div class="col-md-1"><i class="fa fa-github"></i></div>
-    </div>
-    </footer>
-  </div>
-</div>
-  
-  
+
+  <%= render 'layouts/footer' %>
+  <%= debug(params) if Rails.env.development? %>
   
   </body>
 </html>
