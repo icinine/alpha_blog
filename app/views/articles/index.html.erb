@@ -19,8 +19,11 @@
     <% @articles.each do |a| %>
      <div class = "col-md-6">
     <tr>
-        <td><%= a.title %></td>
-        <td><%= a.description %></td>
+        <td><%=link_to a.title, article_path(a) %></td>
+        <td><%= truncate(a.description, length: 100) %></td>
+        <td class="article-meta-details"><small>Created by: <%= a.user.username if a.user%>,
+        <%= time_ago_in_words(a.created_at) %> ago,
+        last updated: <%= time_ago_in_words(a.updated_at) %>) ago</small></td>
     </div>
     
     <div class = "col-md-2">
