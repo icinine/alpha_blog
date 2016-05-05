@@ -1,26 +1,31 @@
-<% if @article.errors.any? %>
+<% if @user.errors.any? %>
 <h2>The following errors prevented the article from being created:</h2>
 <ul>
-   <% @article.errors.full_messages.each do |msg| %>
+   <% @user.errors.full_messages.each do |msg| %>
     <LI><%= msg %></LI>
     <% end %>
     </ul>
 <% end %>
-<div class="row">
+<div class="row clearme">
+    <h1>Signup for Alpha Blog</h1>
 <div class = "col-md-6">
 <div class="well">
-<%= form_for @user do |f| %>
+<%= form_for(@user, :html => {class: "form-horizontal", role: "form"})  do |f| %>
 
 <p>
     <%= f.label :username %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :username %>
 </p>
 <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
     
 </p>
-
+<p>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+    
+</p>
 <p>
     <%= f.submit class: "mybtn" %>
     
