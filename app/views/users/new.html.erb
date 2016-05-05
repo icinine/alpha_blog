@@ -1,0 +1,38 @@
+<% if @article.errors.any? %>
+<h2>The following errors prevented the article from being created:</h2>
+<ul>
+   <% @article.errors.full_messages.each do |msg| %>
+    <LI><%= msg %></LI>
+    <% end %>
+    </ul>
+<% end %>
+<div class="row">
+<div class = "col-md-6">
+<div class="well">
+<%= form_for @user do |f| %>
+
+<p>
+    <%= f.label :username %><br>
+    <%= f.text_field :title %>
+</p>
+<p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+    
+</p>
+
+<p>
+    <%= f.submit class: "mybtn" %>
+    
+</p>
+    
+<% end %>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<br/>
+<div class = "row">
+<%= link_to "Back to Listing", articles_path, class: "mybtn" %>
+</div>
+<br/>
