@@ -1,0 +1,31 @@
+<div class = "row well">
+    <table class = "table">
+        <br/>
+        <div class = "col-md 4">
+        <tr>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    </div>
+    
+   
+    <% obj.each do |a| %>
+     <div class = "col-md-6">
+    <tr>
+        <td><%=link_to a.title, article_path(a) %></td>
+        <td><%= truncate(a.description, length: 100) %></td>
+        <td class="article-meta-details"><small>Created by: <%= a.user.username if a.user%>,
+        <%= time_ago_in_words(a.created_at) %> ago,
+        last updated: <%= time_ago_in_words(a.updated_at) %>) ago</small></td>
+    </div>
+    
+    <div class = "col-md-2">
+        <td><%= link_to "Edit", edit_article_path(a), class: "btn btn-primary" %></td>
+        <td><%= link_to "Show", article_path(a), class: "btn btn-success" %></td>
+        <td><%= link_to "Delete", article_path(a), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %></td>
+    </tr>
+    
+    <% end %>
+    </div>
+</table>
+</div>

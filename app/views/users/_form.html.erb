@@ -1,0 +1,43 @@
+<% if @user.errors.any? %>
+<h2>The following errors prevented the article from being created:</h2>
+<ul>
+   <% @user.errors.full_messages.each do |msg| %>
+    <LI><%= msg %></LI>
+    <% end %>
+    </ul>
+<% end %>
+<div class="row clearme">
+    <h1>Signup for Alpha Blog</h1>
+<div class = "col-md-6">
+<div class="well">
+<%= form_for(@user, :html => {class: "form-horizontal", role: "form"})  do |f| %>
+
+<p>
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+</p>
+<p>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+    
+</p>
+<p>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+    
+</p>
+<p>
+    <%= f.submit(@user.new_record? ? "Sign Up" : "Update Your Account", class: "mybtn") %>
+    
+</p>
+    
+<% end %>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<br/>
+<div class = "row">
+<%= link_to "Back to Listing", articles_path, class: "mybtn" %>
+</div>
+<br/>
