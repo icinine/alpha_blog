@@ -4,6 +4,14 @@
             <%= link_to "Create New Article", new_article_path, class: "btn btn-success" %>
             <br/>
     </div>
-
+<div align="center">
+    <%= will_paginate %>
+    
+</div>
     <%= render 'article', obj: @articles %>
+    
+<div align="center">
+    <%= will_paginate %>
+    
+</div>
 </div>
